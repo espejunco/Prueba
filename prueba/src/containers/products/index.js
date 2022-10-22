@@ -2,7 +2,7 @@ import Card from "../../components/Card";
 import Topbar from "../../components/topbar";
 import React from "react";
 import './style.css'
-import { Breadcrumbs, Link, Container} from '@mui/material'
+import { Breadcrumbs, Link } from '@mui/material'
 
 function Products() {
     return (
