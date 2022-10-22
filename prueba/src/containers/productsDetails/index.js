@@ -1,5 +1,5 @@
 import ColorPicker from "../../components/colorPicker/index.js";
-import DetailsCards from "../../components/detailsCards";
+import DetailsCards from "../../components/Card";
 import Topbar from "../../components/topbar/index.js";
 import StoragePicker from "../../components/storagePicker/index.js";
 import { Breadcrumbs, Link, Typography} from '@mui/material'

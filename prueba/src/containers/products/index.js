@@ -1,8 +1,8 @@
-import Card from "../../components/detailsCards";
+import Card from "../../components/Card";
 import Topbar from "../../components/topbar";
 import React from "react";
 import './style.css'
-import { Breadcrumbs, Link} from '@mui/material'
+import { Breadcrumbs, Link, Container} from '@mui/material'
 
 function Products() {
     return (
@@ -14,6 +14,7 @@ function Products() {
                 </Link>
             </Breadcrumbs>
             <Card />
+
         </div>
     );
 }
