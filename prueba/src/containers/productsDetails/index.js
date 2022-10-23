@@ -14,11 +14,10 @@ function ProductDetails() {
                 <Link underline="hover" color="inherit" href="/">
                     Products
                 </Link>
-
                 <Typography color="text.primary">Products Details</Typography>
             </Breadcrumbs>
-            <ColorPicker />
             <MobileDetails />
+            <ColorPicker />
             <StoragePicker />
         </div>
     );

@@ -1,11 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import { Button } from '@mui/material';
 import './style.css'
 
-function ColorPicker() {
+export default function ColorPicker() {
+  
   return (
-    <div>
-    </div>
+    <Button>
+
+    </Button>
   );
 }
-
-export default ColorPicker;

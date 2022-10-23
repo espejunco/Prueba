@@ -23,7 +23,6 @@ const rows = [
   createData('Dimensiones', 237),
   createData('CPU', 237),
   createData('Batería', 237),
-
 ]
 
 export default function MobileDetails() {

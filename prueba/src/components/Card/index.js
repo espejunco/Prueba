@@ -5,15 +5,38 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Button } from '@mui/material';
 import './style.css';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+ 
+ const queryClient = new QueryClient()
+ 
+ export default function Cards() {
+   return (
+     <QueryClientProvider client={queryClient}>
+       <Example />
+     </QueryClientProvider>
+   )
+ }
+ 
+ function Example() {
+   const { isLoading, error, data } = useQuery('repoData', () =>
+     fetch('https://front-test-api.herokuapp.com/api/product/ZmGrkLRPXOTpxsU4jjAcv').then(res =>
+       res.json()
+     )
+   )
+ 
+   if (isLoading) return 'Loading...'
+ 
+   if (error) return 'An error has occurred: ' + error.message
 
-export default function ActionAreaCard() {
-  return (
+   console.log(data)
+ 
+   return (
     <Card sx={{ maxWidth: 345 }} className='Card'>
       <CardActionArea>
         <CardActionArea>
           <CardMedia
             component="img"
-            image="https://picsum.photos/400/300"
+            src={data.imgUrl}
             alt="CardMedia Image Example"
             height="260"
             title="CardMedia Image Example"
@@ -21,15 +44,14 @@ export default function ActionAreaCard() {
         </CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-           Marca y modelo
+             {data.model} {data.brand}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            $$$
+            {data.price}
           </Typography>
           <Button variant="outlined">Más</Button>
         </CardContent>
       </CardActionArea>
     </Card>
-    
-  );
-}
+   )
+ }

@@ -1,4 +1,4 @@
-import Card from "../../components/Card";
+import Cards from "../../components/Card/index.js";
 import Topbar from "../../components/topbar";
 import React from "react";
 import './style.css'
@@ -13,7 +13,7 @@ function Products() {
                     Products
                 </Link>
             </Breadcrumbs>
-            <Card />
+            <Cards />
 
         </div>
     );

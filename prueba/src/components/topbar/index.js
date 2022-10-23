@@ -14,7 +14,7 @@ export default function Topbar() {
   return (
     <div className='Navbar'>
       <Tabs value={value} onChange={handleChange}>
-        <Tab label="Active" />Logo
+        <Tab label="LOGO" />Logo
       </Tabs>
       <Button className='Troller'>
         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
