@@ -1,0 +1,48 @@
+.item-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#product-name {
+  padding: 1em 0 0;
+  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
+  margin: .5em 0;
+}
+
+
+#product-description {
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  color: grey;
+  font-weight: lighter;
+  margin: 0;
+}
+
+#product-price {
+  font-size: 1em;
+}
+
+.show-product .product-image {
+  height: 35em;
+}
+
+.item-name #product-name {
+  font-size: 40px;
+  border: none;
+}
+
+.item-name #product-description {
+  font-size: 30px;
+}
+
+.item-name #product-price {
+  font-size: 20px;
+  color: grey;
+}
+
+.stars {
+  display: flex;
+}
