@@ -9,24 +9,31 @@ import './style.css'
 import ColorPicker from '../colorPicker'
 //Internals
 import './style.css';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import {useParams} from 'react-router-dom';
+
 
 const queryClient = new QueryClient()
 
 export default function Cards() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Example />
+      <Data />
     </QueryClientProvider>
   );
 
-  function Example() {
+  function Data() {
+
+    
+    const {id} = useParams();
+
     const { isLoading, error, data } = useQuery('repoData', () =>
-      fetch(`https://front-test-api.herokuapp.com/api/product/${data.id}`).then(res =>
+      
+      fetch(`https://front-test-api.herokuapp.com/api/product/${id}`).then(res =>
         res.json()
       )
     )
-
+    console.log(id)
     if (isLoading) return 'Loading...'
 
     if (error) return 'An error has occurred: ' + error.message
