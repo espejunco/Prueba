@@ -10,13 +10,13 @@ const queryClient = new QueryClient()
 export default function Cards() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Example />
-    </QueryClientProvider>
+      <Group /> 
+      </QueryClientProvider>
   );
 
-  function Example() {
+  function Group() {
     const { isLoading, error, data } = useQuery('repoData', () =>
-      fetch('https://front-test-api.herokuapp.com/api/product/').then(res =>
+      fetch('https://front-test-api.herokuapp.com/api/product').then(res =>
         res.json()
       )
     )
@@ -34,18 +34,16 @@ export default function Cards() {
               return (
                 
                 <div key={data.id} className="item">
-                 
-                  <div className="product-img">
-                  <Link to={`/productDetails/`}>
 
+                  <div className="product-img">
+                    <Link to={`/product/${data.id}` }>
                     <img src={data.imgUrl} />
-                    </Link>
-                  </div>
-                  <div className="product-details">
+                  </Link>
+                </div>
+                <div className="product-details">
                     <h1 id="product-name">{data.model}</h1>
                     <h4 id="product-description">{data.brand}</h4>
-                  </div>
-                  <div className="price-add">
+                  </div><div className="price-add">
                     <h5 id="product-price">${data.price}</h5>
 
                   </div>

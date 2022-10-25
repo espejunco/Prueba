@@ -1,18 +1,13 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProductDetails from "./containers/productsDetails";
-import Products from "./containers/products";
 
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="Products" element={<Products />} />
-          <Route path="ProductDetails" element={<ProductDetails />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Topbar from './components/topbar';
+import App from "../src/containers/routes/routes";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+ReactDOM.render(
+  <React.StrictMode>
+    <Topbar />
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
