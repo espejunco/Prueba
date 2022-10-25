@@ -5,16 +5,11 @@ import { Button } from '@mui/material';
 import './style.css'
 
 export default function Topbar() {
-  const [value, setValue] = React.useState(2);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <div className='Navbar'>
-      <Tabs value={value} onChange={handleChange}>
-        <Tab label="LOGO" href='.'/>
+      <Tabs >
+        <Tab label="LOGO" href='' />
       </Tabs>
       <Button className='Troller'>
         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
