@@ -1,8 +1,7 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Topbar from './components/topbar';
-import App from "../src/containers/routes/routes";
+import Topbar from './components/Topbar';
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
