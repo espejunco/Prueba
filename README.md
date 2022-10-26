@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Empezando con Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Scripts disponibles
 
-## Available Scripts
+Al descargar el repositorio ejecute
 
-In the project directory, you can run:
+###`npm install`
+
+Para descargar las dependencias y poder arrancar el proyecto con
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La página se recargará cuando hagas cambios.
+También puedes ver cualquier error de lint en la consola.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lanza el ejecutor de pruebas en el modo de vigilancia interactiva.\N
+Vea la sección sobre [ejecución de pruebas](https://facebook.github.io/create-react-app/docs/running-tests) para más información.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`.
+Agrupa correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La compilación está minificada y los nombres de los archivos incluyen los hashes.
+Tu aplicación está lista para ser desplegada.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Información sobre el proyecto
 
-### `npm run eject`
+Se trata de una ecommerce de dispositivos electrónicos como móviles y ipads.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Vista principal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Encontramos en un primer lugar una barra de navegación con el logo a la izquierda que siempre redigirá a la misma, a la derecha el icono del carrito.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Debajo del logo de encunetra el breadcrums con el directorio en el que estamos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Por último se observa las cartas donde está la imagen del producto, modelo, marca y precio, para acceder a la información del mismo se debe clicar en la imagen, que nos llevará a la segunda vista.
 
-## Learn More
+## Vista secundaria
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El Topbar siempre estará presente y tendrá el mismo funcionamiento que en la primera opción, ya que es un componente reutilizable para todas las vistas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+En el body vemos dos columnas, la de la izquierda con la imagen del producto con el tamaño idóneo para su correcta visualización manteniendo su calidad, y en la de la derecha una tabla con sus características principales, debajo de la misma vemos dos apartados más donde podremos elegir tanto el color como el almacenamiento.
 
-### Code Splitting
+# Observaciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+La función de añadir cartas al carrito no funciona ya que existen problemas con el Post al entregar los datos al backend, lo he intentado de varias formas sin éxito.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
