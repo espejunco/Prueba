@@ -1,13 +1,13 @@
-import { Breadcrumbs, Link  } from '@mui/material'
+import { Breadcrumbs, Link } from '@mui/material'
 import React from "react";
 import './style.css'
-import MobileDetails from "../../components/mobileDetails/index.js";
+import MobileDetails from "../../components/MobileDetails";
 
 function Product() {
-    
+
     return (
         <div className="App">
-                <Breadcrumbs marginTop="40px" marginLeft="25px" aria-label="breadcrumb" zIndex='1' position='fixed' backgroundColor='white'>
+            <Breadcrumbs marginTop="40px" marginLeft="25px" aria-label="breadcrumb" zIndex='1' position='fixed' backgroundColor='white'>
                 <Link underline="hover" color="inherit" href="/" fontSize='12px'>
                     Products
                 </Link>
@@ -15,7 +15,7 @@ function Product() {
                     Products Details
                 </Link>
             </Breadcrumbs>
-            <MobileDetails/>
+            <MobileDetails />
         </div>
     );
 }
