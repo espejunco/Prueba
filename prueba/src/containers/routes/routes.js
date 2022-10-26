@@ -1,15 +1,15 @@
 import React from 'react';
 import Products from '../products/index';
 import Product from '../productsDetails/index';
-import { BrowserRouter, Route, Navigate, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 const App = () => {
 
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path = "/products" element={<Products />}/>
-        <Route exact path={"/product/:id"} element={<Product />}/>
+        <Route exact path="/" element={<Products />} />
+        <Route exact path={"/product/:id"} element={<Product />} />
 
       </Routes>
     </BrowserRouter>

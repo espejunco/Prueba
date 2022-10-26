@@ -1,12 +1,9 @@
-import * as React from 'react';
+import {React, useState }from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import './style.css'
-import ColorPicker from '../colorPicker'
 //Internals
 import './style.css';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
@@ -33,7 +30,8 @@ export default function Cards() {
         res.json()
       )
     )
-    console.log(id)
+    const [selectedStorage, setSelectedStorage] = useState();
+    const [selectedColor, setSelectedColor] = useState([0]);
     if (isLoading) return 'Loading...'
 
     if (error) return 'An error has occurred: ' + error.message
@@ -42,6 +40,17 @@ export default function Cards() {
       return { features, dates };
     }
 
+    const options = data.options
+    const storages = options.storages
+        const colors = options.colors
+
+    const handleSelectColor = (e) => {
+      setSelectedColor(e.target.value);
+    };
+
+  const handleSelectStorage = (e) => {
+    setSelectedStorage(e.target.value);
+  };
     const rows = [
       createData('Marca', data.brand),
       createData('Modelo', data.model),
@@ -50,18 +59,21 @@ export default function Cards() {
       createData('Peso', data.weight),
       createData('Resolución de pantalla', data.displayResolution),
       createData('Ram', data.ram),
-      createData('Cámaras', data.primaryCamera),
+      // eslint-disable-next-line 
+      createData('Cámaras', ("   trasera:   " + data.primaryCamera + "  ~\n  " + "   Frontal:   " + data.secondaryCmera)),
       createData('Dimensiones', data.dimentions),
       createData('CPU', data.cpu),
       createData('Batería', data.battery),
     ]
+
     return (
       <div className="show-product">
-        <div className="item-wrapper">
-          <div className='container'>
-            <img src={data.imgUrl} className="product-img" alt='img' />
-          </div>
-          <TableContainer component={Paper} className='tableC'>
+        <div className="container">
+          <div className="container-2">
+            <img className="product-img" src={data.imgUrl}  alt='img' />
+            <button class="btncl">Add to Cart</button>
+            </div>
+            <div className='bodyclass'>
             <Table sx={{ maxHeight: 50 }} aria-label="custom pagination table" className='table'>
               <TableBody>
                 {rows.map((row) => (
@@ -76,11 +88,45 @@ export default function Cards() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
-            
-            <ColorPicker/>
-          </TableContainer>
+          </Table>
+      <div>
+      <h5>Colores</h5>
+      <div className="storages_list">
+        {colors.map((color) => (
+          <label className='label'>
+            <input
+              key={color.code}
+              type="radio"
+              value={color.code}
+              name="color"
+              defaultChecked={selectedColor === color.code}
+              onChange={handleSelectColor}
+            />{" "}
+            {color.name}
+          </label>
+        ))}
+      </div>
 
+      </div>
+      <div>
+      <h5>Storages</h5>
+      <div className="storages_list">
+        {storages.map((storage) => (
+          <label className='label'>
+            <input
+              key={storage.code}
+              type="radio"
+              value={storage.code}
+              name="storage"
+              defaultChecked={selectedStorage === storage.code}
+              onChange={handleSelectStorage}
+            />{" "}
+            {storage.name}
+          </label>
+        ))}
+      </div>
+      </div>
+          </div>
         </div>
       </div>
     );
