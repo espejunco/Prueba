@@ -74,6 +74,7 @@ export default function Cards() {
             <button class="btncl">Add to Cart</button>
             </div>
             <div className='bodyclass'>
+            <h5>Características</h5>
             <Table sx={{ maxHeight: 50 }} aria-label="custom pagination table" className='table'>
               <TableBody>
                 {rows.map((row) => (
@@ -109,7 +110,7 @@ export default function Cards() {
 
       </div>
       <div>
-      <h5>Storages</h5>
+      <h5>Almacenamiento</h5>
       <div className="storages_list">
         {storages.map((storage) => (
           <label className='label'>
