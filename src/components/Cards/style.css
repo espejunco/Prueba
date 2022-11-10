@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 .item-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -7,14 +9,7 @@
   justify-content: center;
   grid-gap: 150px;
   grid-auto-rows: minmax(10px, 10);
-  margin: 5% 5%;
-}
-
-#product-name {
-  padding: 1em 0 0;
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-
+  margin-top: 30px;
 }
 
 .item {
@@ -28,29 +23,16 @@
   margin: auto;
   overflow: hidden;
   background: white;
-  box-shadow: 5px 5px 15px rgba(red, 18px);
   border-radius: 10px;
 }
 
-#product-description {
-  text-align: center;
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-  color: grey;
-  font-weight: lighter;
-  
+.item:hover {
+background-color: rgba(204, 204, 204, 0.185);
 }
 
 #product-price {
   font-size: 1em;
 }
-
-.btn {
-  width: 170px;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
 
 /* center container in the middle */
 html {
@@ -78,27 +60,21 @@ body {
   grid-auto-rows: minmax(10px, 10);
 }
 
-p {
-  font-size: 0.6em;
-  color: rgb(240, 142, 158);
-  letter-spacing: 1px;
-}
-
 h1 {
   font-size: 1.2em;
   color: dark;
 }
 
 h2 {
-  color: tan;
+  color: rgba(94, 91, 91, 0.849);
 }
 
 h4 {
-  color: pink;
+  color: rgba(94, 91, 91, 0.849);
 }
 
 h5 {
-  color: pink;
+  color: rgba(94, 91, 91, 0.849);
 }
 
 img {
@@ -106,12 +82,6 @@ img {
   margin-top: 50px;
   margin-bottom: 20px;
 }
-
-.slideshow-buttons {
-
-  display: none;
-}
-
 
 .product {
   position: absolute;
@@ -127,20 +97,6 @@ img {
   text-align: justify;
 }
 
-button {
-  background: rgba(0, 0, 0, 0.658);
-  padding: 10px;
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  margin: -1px;
-  border-radius: 2px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: white;
-  cursor: pointer;
-
-}
 
 .add {
   width: 100%;
