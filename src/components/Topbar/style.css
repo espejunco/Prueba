@@ -1,14 +1,17 @@
 .Troller {
-   width: 5%;
+  width: 5%;
   float: right;
   top: -38px;
 }
 
 .Navbar {
-position: fixed; /* Set the navbar to fixed position */
-top: 0; /* Position the navbar at the top of the page */
-width: 100%; /* Full width */
-height: 50px;
-background-color: white;
-z-index: 1;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  height: 50px;
+  background-color: white;
+  z-index: 1;
 }

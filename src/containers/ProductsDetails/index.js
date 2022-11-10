@@ -13,7 +13,7 @@ function Product() {
         zIndex="1"
         position="fixed"
         backgroundColor="white"
-        width='150%'
+        width="150%"
       >
         <Link underline="hover" color="inherit" href="/" fontSize="12px">
           Products
